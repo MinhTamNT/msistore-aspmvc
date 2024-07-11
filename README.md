@@ -24,11 +24,12 @@ Our e-commerce platform offers a comprehensive shopping experience, allowing cus
   - [Product Management](#product-management)
   - [Order Management](#order-management)
   - [Analytics and Reports](#analytics-and-reports)
+- [How Install](#how-install)
 - [Contact](#contact)
 
 ## Model Database
 
-![Database Schema](image.png)
+![Database Schema](readme/image.png)
 [Back to Top](#table-of-contents)
 
 ## Features
@@ -92,7 +93,7 @@ A comprehensive overview of the store's performance, including sales data, recen
 
 ### Order Management:
 
-![Order Management](image-1.png)
+![Order Management](readme/image-1.png)
 
 - **View Orders:** Administrators can view all orders placed by customers.
 - **Update Order Status:** Administrators can update the status of orders (e.g., processing, shipped, delivered).
@@ -101,13 +102,76 @@ A comprehensive overview of the store's performance, including sales data, recen
 
 ### Analytics and Reports:
 
-![Analytics and Reports](image-3.png)
+![Analytics and Reports](readme/image-3.png)
 
 - **Sales Reports:** Generate reports on sales performance over different periods.
 - **User Activity:** Monitor user activity and engagement on the platform.
 - **Inventory Reports:** Keep track of inventory levels and receive alerts for low stock items.
-  ![Inventory Reports](image-2.png)
+  ![Inventory Reports](readme/image-2.png)
   [Back to Top](#table-of-contents)
+
+## How Install
+
+Front-end app
+
+```bash
+git clone https://github.com/MinhTamNT/msistore-react
+```
+
+```
+npm install
+```
+
+Back-end App
+
+```bash
+  git clone https://github.com/MinhTamNT/msistore-aspmvc.git
+```
+
+```
+Build Project
+```
+
+- In file appsettings.Development.json configuration all key here
+
+```bash
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "Jwt": {
+    "Key": "",
+    "Issuer": "",
+    "Audience": ""
+  },
+  "Cloudinary": {
+    "CloudName": "",
+    "ApiKey": "",
+    "ApiSecret": ""
+  }
+
+
+}
+
+```
+
+- Cloudinary : https://cloudinary.com/documentation
+- JWT : You can generate key on the webiste such as : https://www.uuidgenerator.net/
+
+- File MapController you must enter the key like that :
+
+```c#
+ private readonly string _bingMapsApiKey = "";
+```
+
+- Getting key bing map : https://learn.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key
+
+```bash
+Run Project : Press F5
+```
 
 ## Contact
 

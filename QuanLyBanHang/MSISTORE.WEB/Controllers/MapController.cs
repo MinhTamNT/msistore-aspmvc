@@ -14,7 +14,7 @@ namespace MSISTORE.WEB.Controllers
     {
         private readonly MapService _mapService;
         private readonly IHttpClientFactory _httpClientFactory;
-        private readonly string _bingMapsApiKey = "AnmtdlciSHCT7-QaOKIk_DNILKWHw4ehMIsCGTXHi-HTGuGaoQ4KfQppjtyYsh5P";
+        private readonly string _bingMapsApiKey = "";
 
         public MapController(MapService mapService, IHttpClientFactory httpClientFactory)
         {
